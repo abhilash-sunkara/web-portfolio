@@ -1,2 +1,2 @@
 # web-portfolio
-Personal portfolio created usinng React, Next.js and TailwindCSS
+Personal portfolio created using React, Next.js and TailwindCSS
