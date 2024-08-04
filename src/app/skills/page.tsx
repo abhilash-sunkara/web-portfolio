@@ -13,9 +13,8 @@ export default function Skills() {
             <div className="pb-8 flex-row w-full">
                 <h1 className = "text-slate-300 font-bold text-7xl">
                     Skills
-                    
                 </h1>
-                <h1 className = "text-blue-600 font-bold text-4xl absolute right-44 top-14" onClick={() => {router.back()}}>
+                <h1 className = "text-blue-600 font-bold text-4xl absolute right-44 top-14 hover:text-blue-200 hover:text-5xl transition-all duration-200 ease-in-out " onClick={() => {router.back()}}>
                     Back
                 </h1>
             </div>
