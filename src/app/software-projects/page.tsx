@@ -1,6 +1,7 @@
 'use client';
 
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
+import 'overlayscrollbars/overlayscrollbars.css';
 import NavBar from "../components/navbar";
 import { Project } from "../robotics-projects/page";
 import Image from "next/image";
