@@ -8,17 +8,13 @@ const NavBar = () => {
   
   const handleClick = (route: string) => {
     if(lastSegment == route){
-      router.back()
+      router.push("/")
     }else{
       router.push("/" + route)
     }
   }
   let segments = usePathname().split("/")
   let lastSegment = segments[segments.length - 1]
-  
-  console.log("rendered")
-
-  
 
   return (
     <div className="fixed top-0 right-0 h-screen w-32 flex flex-col justify-evenly bg-slate-300 text-slate-950">

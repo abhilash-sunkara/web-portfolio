@@ -15,9 +15,6 @@ export default function RoboticsProjects() {
                 <h1 className = "text-slate-300 font-bold text-7xl">
                     Robotics Projects
                 </h1>
-                <h1 className = "text-blue-600 font-bold text-4xl absolute right-44 top-14 hover:text-blue-200 hover:text-5xl transition-all duration-200 ease-in-out " onClick={() => {router.back()}}>
-                    Back
-                </h1>
             </div>
             <OverlayScrollbarsComponent
                 className="w-11/12"
@@ -59,7 +56,7 @@ type DetailTabTypes = {
 
 const DetailTab: React.FC<DetailTabTypes> = ({text}) => {
     return (
-        <div className="h-12 w-36 my-2 mr-2">
+        <div className="min-h-12 min-w-36 my-2 mr-2 flex flex-row items-center justify-center border p-2 border-slate-300 rounded">
             <h1 className="text-slate-300 font-bold text-l">
                 {text}
             </h1>
@@ -67,7 +64,7 @@ const DetailTab: React.FC<DetailTabTypes> = ({text}) => {
     )
 }
 
-type Project = {
+export type Project = {
     name : string, 
     details : string[],
     imagePath : string
@@ -103,7 +100,20 @@ const ProjectArray: Project[] = [
         "Aluminum arm with chain virtual 4-bar", 
         "Silicone wheel intake", 
         "Aluminum cone re-righter"], imagePath : "/hurricane.png"
-    }
-    
+    },
+    {name : "Cyclone" , details : ["Powerplay robot", 
+        "Aluminum plates", "Servo deposit turret", 
+        "Dual jointed intake arm", 
+        "Servo linkage horizontal extension",], imagePath : "/cyclone.png"
+    },
+    {name : "Whitesnake", details : ["Powerplay robot", 
+        "Dual motor turret", "MGN rail vertical extension", 
+        "Passive flipper deposit", "Pole guide with color sensors",
+        "Servo linkage horizontal extension", "Dual jointed intake arm"], imagePath : "/whitesnake.png"
+    },
+    {name : "Purple Haze", details : ["Servo turret deposit", 
+        "Linear slide horizontal extension", "Adjusting virtual 4 bar intake claw" , 
+        "Adjusting virtual 4 bar deposit claw", 
+        "Dual camera for cone and pole detection"], imagePath : "/purplehaze.png"}
 ]
 
