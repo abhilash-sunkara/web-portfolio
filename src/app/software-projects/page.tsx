@@ -5,17 +5,14 @@ import 'overlayscrollbars/overlayscrollbars.css';
 import NavBar from "../components/navbar";
 import { Project } from "../robotics-projects/page";
 import Image from "next/image";
+import AnimatedHeader from "../components/animated_header";
 
 export default function SoftwareProjects() {
     
     
     return (
         <main className="flex min-h-screen flex-col items-start justify-start p-10 co bg-slate-950">
-            <div className="pb-8 flex-row w-full ">
-                <h1 className = "text-slate-300 font-bold text-7xl">
-                    Software Projects
-                </h1>
-            </div>
+            <AnimatedHeader text = "Software Projects" className="text-slate-300 font-bold text-7xl"></AnimatedHeader>
             <OverlayScrollbarsComponent
                 className="w-11/12"
                 options={{ scrollbars: { autoHide: "never" } }}

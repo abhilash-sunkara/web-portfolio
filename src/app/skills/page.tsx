@@ -3,6 +3,7 @@
 
 import { useRouter } from "next/navigation";
 import NavBar from "../components/navbar";
+import AnimatedHeader from "../components/animated_header";
 
 
 export default function Skills() {
@@ -10,11 +11,7 @@ export default function Skills() {
     
     return (
         <main className="flex min-h-screen flex-col items-start justify-start p-10 co bg-slate-950">
-            <div className="pb-8 flex-row w-full">
-                <h1 className = "text-slate-300 font-bold text-7xl">
-                    Skills
-                </h1>
-            </div>
+            <AnimatedHeader text = "Skills" className="text-slate-300 font-bold text-7xl"></AnimatedHeader>
             <div className="py-1">
                 <h1 className = "text-slate-300 font-bold text-3xl py-1 leading-snug">
                     Programming Languages

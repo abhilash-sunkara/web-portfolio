@@ -5,16 +5,12 @@
 import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { useRouter } from "next/navigation";
 import NavBar from "./components/navbar";
+import AnimatedHeader from "./components/animated_header";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-start justify-start p-10 bg-slate-950">
-      <div className="pb-8">
-        <p className="text-slate-300 font-bold text-7xl">
-          Hi, my name is <br/> Abhilash Sunkara.
-        </p>
-        
-      </div>
+      <AnimatedHeader text="My name is Abhilash Sunkara" className="text-slate-300 font-bold text-7xl"></AnimatedHeader>      
       <div className="pb-8">
         <p className="text-slate-300 font-bold text-3xl py-1 leading-snug">
           I am a high school senior in the ATX area<br/>

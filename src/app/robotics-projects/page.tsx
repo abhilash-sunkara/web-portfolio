@@ -5,17 +5,14 @@ import NavBar from "../components/navbar";
 import Image from "next/image";
 import 'overlayscrollbars/overlayscrollbars.css';
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
+import AnimatedHeader from "../components/animated_header";
 
 export default function RoboticsProjects() {
     const router = useRouter()
     
     return (
         <main className="flex min-h-screen flex-col items-start justify-start p-10 co bg-slate-950">
-            <div className="pb-8 flex-row w-full ">
-                <h1 className = "text-slate-300 font-bold text-7xl">
-                    Robotics Projects
-                </h1>
-            </div>
+            <AnimatedHeader text = "Robotics Projects" className="text-slate-300 font-bold text-7xl"></AnimatedHeader>
             <OverlayScrollbarsComponent
                 className="w-11/12"
                 options={{ scrollbars: { autoHide: "never" } }}
