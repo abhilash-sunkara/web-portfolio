@@ -13,8 +13,8 @@ export default function AboutMe() {
             </div>
             <div className="w-9/12 pb-8">
                 <h1 className="text-2xl text-slate-300 text-justify">
-                    I am a current senior in highschool and I'm an aspiring engineer and software 
-                    developer. I'm planning to pursue an electrical computer engineering major while 
+                    I am a current senior in highschool and I&apos;m an aspiring engineer and software 
+                    developer. I&apos;m planning to pursue an electrical computer engineering major while 
                     refining my own skills in web development, designing and manufacturing robots and 
                     creating performant applications.
                 </h1>
@@ -23,8 +23,8 @@ export default function AboutMe() {
                 <h1 className="text-2xl text-slate-300 text-justify">
                     I have experience with CAD programs and the engineering design process through 
                     leading my FTC Robotics team, 21438 Chaotic Current, for 2 years. During this time,
-                     we've made it to the Texas States competition in 2022 and finalized for the Inspire award 
-                     in 2023. I also refined my skills with data collection, sensor usage and OOP through my work here.
+                    we&apos;ve made it to the Texas States competition in 2022 and finalized for the Inspire award 
+                    in 2023. I also refined my skills with data collection, sensor usage and OOP through my work here.
                 </h1>
             </div>
             <div className="w-9/12 pb-8">
