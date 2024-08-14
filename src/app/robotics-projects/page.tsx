@@ -6,6 +6,8 @@ import Image from "next/image";
 import 'overlayscrollbars/overlayscrollbars.css';
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import AnimatedHeader from "../components/animated_header";
+import { motion } from "framer-motion";
+import { slideFromLeft } from "../components/animations";
 
 export default function RoboticsProjects() {
     const router = useRouter()
@@ -29,7 +31,7 @@ export default function RoboticsProjects() {
 
 const RoboticsProjectsTab: React.FC<Project> = ({name, details, imagePath}) => {
     return (
-        <div className="w-11/12 bg-slate-800 rounded border-2 border-slate-500 flex flex-row justify-between items-start p-4 my-4">
+        <motion.div variants={slideFromLeft} initial = "hidden" animate = "active" className="w-11/12 bg-slate-800 rounded border-2 border-slate-500 flex flex-row justify-between items-start p-4 my-4">
                 <div className="flex flex-col">
                     <h1 className="text-slate-300 font-bold text-3xl pb-2">{name}</h1>
                     <div className="flex flex-col">
@@ -43,7 +45,7 @@ const RoboticsProjectsTab: React.FC<Project> = ({name, details, imagePath}) => {
                 <div>
                     <Image src={imagePath} alt="wattson" width={400} height={200} style={{borderRadius : 4, borderColor : "#cbd5e1", borderWidth : 2}}/>
                 </div>
-            </div>
+            </motion.div>
     )
 }
 
