@@ -29,7 +29,7 @@ export const slideFromLeft = {
         opacity : 1,
         transition: {
             type : "spring",
-            duration : 0.5
+            duration : 1.5
         }
     },
     hidden : {
@@ -37,6 +37,8 @@ export const slideFromLeft = {
         opacity : 0
     }
 }
+
+
 
 export const scaleFromLeft = {
     active : {

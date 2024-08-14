@@ -9,18 +9,20 @@ import {slideFromTop, scaleFromLeft} from "./animations";
 type AnimatedHeaderProps = {
     text: string,
     className?: string
+    setNextAnim? : (payload : boolean) => void
 }
 
-export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({text, className = ''}) => {
+export const AnimatedHeader: React.FC<AnimatedHeaderProps> = ({text, className = '', setNextAnim = (payload: boolean) => {}}) => {
 
     const length = text.length
-    const staggerDelay = 0.01
+    const staggerDelay = 1
     const time = length * staggerDelay
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            
-        }, time * 1000 + 1000)
+            console.log("set next to run")
+            setNextAnim(true)
+        }, time * 100)
 
         return () => {
             clearTimeout(timer)
