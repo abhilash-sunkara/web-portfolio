@@ -30,7 +30,7 @@ export default function AboutMe() {
             >
             <motion.div variants={slideFromLeft} className="w-9/12 pb-8">
                 <h1 className="text-2xl text-slate-300 text-justify">
-                    I am a current senior in highschool and I&apos;m an aspiring engineer and software 
+                    I am a Computer Engineer at TAMU and I&apos;m an aspiring engineer and software 
                     developer. I&apos;m planning to pursue an electrical computer engineering major while 
                     refining my own skills in web development, designing and manufacturing robots and 
                     creating performant applications.
@@ -51,6 +51,7 @@ export default function AboutMe() {
                 </h1>
             </motion.div>
             </motion.div>
+
             <NavBar></NavBar>
         </main>
     )

@@ -1,0 +1,60 @@
+import { Project } from "./page";
+
+export const ProjectArray: Project[] = [
+    {name : "Wattson", details : ["PowerPlay robot", 
+        "Polycarbonate + HDPE Plates", "Silicone Claw Intake", 
+        "Polycarb arm actuated by motor", 
+        "Vertical extension powered by linear slides, motors and pulleys", 
+        "Advanced to Texas States"], imagePath : "/wattson.jpg", tags : ["All Projects", "Robotics", "Physical Robots"]
+    },
+    {name : "Maelstrom", details : ["PowerPlay robot", 
+        "Aluminum + polycarbonate plates", "Claw intake", 
+        "Virtual 4-Bar with belts", 
+        "Bearing stack turret", 
+        ], imagePath : "/maelstrom.png", tags : ["All Projects", "Robotics", "Practice CADS"]
+    },
+    {name : "Vortex", details : ["PowerPlay robot", 
+        "Aluminum plates", "Double servo claw intake", 
+        "Servo linkage horizontal extension", 
+        "Dual camera set-up", 
+        "Aluminum arm powered by motor"], imagePath : "/vortex.png", tags : ["All Projects", "Robotics", "Practice CADS"]
+    },
+    {name : "Tempest", details : ["PowerPlay robot", 
+        "Aluminum plates", "Servo linkage extension", 
+        "MGN Linear rails powered by motors and pulleys", 
+        "Polycarb servo arm", 
+        "Bearing stack turret"], imagePath : "/tempest.png", tags : ["All Projects", "Robotics", "Practice CADS"]
+    },
+    {name : "Hurricane", details : ["PowerPlay robot", 
+        "Polycarb plates", "Vertical claw", 
+        "Aluminum arm with chain virtual 4-bar", 
+        "Silicone wheel intake", 
+        "Aluminum cone re-righter"], imagePath : "/hurricane.png", tags : ["All Projects", "Robotics", "Practice CADS"]
+    },
+    {name : "Cyclone" , details : ["Powerplay robot", 
+        "Aluminum plates", "Servo deposit turret", 
+        "Dual jointed intake arm", 
+        "Servo linkage horizontal extension",], imagePath : "/cyclone.png", tags : ["All Projects", "Robotics", "Practice CADS"]
+    },
+    {name : "Whitesnake", details : ["Powerplay robot", 
+        "Dual motor turret", "MGN rail vertical extension", 
+        "Passive flipper deposit", "Pole guide with color sensors",
+        "Servo linkage horizontal extension", "Dual jointed intake arm"], imagePath : "/whitesnake.png", tags : ["All Projects", "Robotics", "Practice CADS"]
+    },
+    {name : "Purple Haze", details : ["Servo turret deposit", 
+        "Linear slide horizontal extension", "Adjusting virtual 4 bar intake claw" , 
+        "Adjusting virtual 4 bar deposit claw", 
+        "Dual camera for cone and pole detection"], imagePath : "/purplehaze.png", tags : ["All Projects", "Robotics", "Practice CADS"]
+    },
+    {name : "Masters of the Air", details : ["Computer Science 3 final project in Java", 
+        "Made using LibGDX", "Plane shooter game with moving enemies and powerups", 
+        "Collisions handled by Box2D", "Manager system to control enemies, bullets and powerups"], imagePath : "/masters_of_the_air.png", 
+        tags : ["All Projects", "Software Projects", "Java"]
+    },
+    {name : "Terminal Space Invaders", details : ["Terminal game in Rust", 
+        "Multithreaded rendering system with mpsc channels", 
+        "Terminal input handled through crossterm"], imagePath : "/space_invaders.png", 
+        tags : ["All Projects", "Software Projects", "Rust"]},
+    {name : "Custom CLI", details : ["CLI written in rust", "Can create .txt files and append text to them", "Also supports text search in files"], 
+        imagePath : "/custom_cli.png", tags : ["All Projects", "Software Projects", "Rust"]}
+]

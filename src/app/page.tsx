@@ -24,6 +24,7 @@ import { useEffect, useState } from "react";
       </motion.p> */}
 
 export default function Home() {
+  const router = useRouter()
 
   const staggerContainer = {
     hidden: {},
@@ -33,12 +34,14 @@ export default function Home() {
       },
     },
   };
+  
 
 
   const [firstAnim, setFirstAnim] = useState(false)
 
   return (
-    <main className="flex min-h-screen flex-col items-start justify-start p-10 bg-slate-950">
+    <main className="flex min-h-screen flex-col justify-between p-10 bg-slate-950">
+      <div className="flex flex-col items-start">
       <AnimatedHeader text="My name is Abhilash Sunkara" className="text-slate-300 font-bold text-7xl" setNextAnim={setFirstAnim}></AnimatedHeader> 
       <motion.div
         variants={staggerContainer}
@@ -47,7 +50,7 @@ export default function Home() {
       >
         <motion.div variants = {slideFromLeft} className="pb-8">
         <p className="text-slate-300 font-bold text-3xl py-1 leading-snug">
-          I am a high school senior in the ATX area<br/>
+          I am a computer engineering freshmen at TAMU<br/>
           and from mobile app development to virtual 4-bars,<br/> 
           I&apos;m interested in everything related to engineering.
         </p>
@@ -67,9 +70,21 @@ export default function Home() {
           <motion.h1 className="text-slate-300 font-bold text-2xl py-1" variants = {slideFromLeft}>
             3.&nbsp; Web development
           </motion.h1>
+          <motion.h1 className="text-slate-300 font-bold text-2xl py-1" variants = {slideFromLeft}>
+            4.&nbsp; FPGA design
+          </motion.h1>
         </motion.div> 
-        </motion.div>
-        <NavBar/>
+      </motion.div>
+      </div>
+      <div className="flex flex-col">
+        <div className="hover:bg-slate-900 hover:text-slate-300 w-full border-2 border-slate-400 my-1 text-slate-400 text-2xl font-bold p-4 transition-all duration-200 ease-in-out rounded-md" onClick={() => {router.push("/projects")}}>
+          See my projects
+        </div>  
+        <div className="hover:bg-slate-900 hover:text-slate-300 w-full border-2 border-slate-400 my-1 text-slate-400 text-2xl font-bold p-4 transition-all duration-200 ease-in-out rounded-md">
+          Download my resume
+        </div>
+      </div>
+      {/* <NavBar/> */}
     </main>
   );
 }
