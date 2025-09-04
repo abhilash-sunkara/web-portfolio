@@ -40,7 +40,7 @@ export default function RoboticsProjects() {
                 </div>
             </div>
             <div className="flex flex-row justify-start items-center">
-                <div className="text-slate-300 font-bold text-5xl mr-4">Filter</div>
+                <div className="text-slate-300 font-bold text-5xl mr-4">Filter: </div>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"

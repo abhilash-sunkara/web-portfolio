@@ -38,6 +38,7 @@ export default function Home() {
 
 
   const [firstAnim, setFirstAnim] = useState(false)
+  const [buttonsAnim, setButtonsAnim] = useState(false)
 
   return (
     <main className="flex min-h-screen flex-col justify-between p-10 bg-slate-950">
@@ -47,6 +48,7 @@ export default function Home() {
         variants={staggerContainer}
         initial = "hidden"
         animate = {firstAnim ? "active" : "hidden"}
+        
       >
         <motion.div variants = {slideFromLeft} className="pb-8">
         <p className="text-slate-300 font-bold text-3xl py-1 leading-snug">
@@ -64,7 +66,7 @@ export default function Home() {
           <motion.h1 className="text-slate-300 font-bold text-2xl py-1" variants = {slideFromLeft}>
             1.&nbsp; Designing robots 
           </motion.h1>
-          <motion.h1 className="text-slate-300 font-bold text-2xl py-1" variants = {slideFromLeft}>
+          <motion.h1 className="text-slate-300 font-bold text-2xl py-1" variants = {slideFromLeft} onAnimationComplete={() => {setButtonsAnim(true)}}>
             2.&nbsp; Low level programming 
           </motion.h1>
           <motion.h1 className="text-slate-300 font-bold text-2xl py-1" variants = {slideFromLeft}>
@@ -76,14 +78,15 @@ export default function Home() {
         </motion.div> 
       </motion.div>
       </div>
-      <div className="flex flex-col">
+      <motion.div className="flex flex-col" variants={slideFromLeft} initial="hidden"
+  animate={buttonsAnim ? "active" : "hidden"}>
         <div className="hover:bg-slate-900 hover:text-slate-300 w-full border-2 border-slate-400 my-1 text-slate-400 text-2xl font-bold p-4 transition-all duration-200 ease-in-out rounded-md" onClick={() => {router.push("/projects")}}>
           See my projects
         </div>  
         <div className="hover:bg-slate-900 hover:text-slate-300 w-full border-2 border-slate-400 my-1 text-slate-400 text-2xl font-bold p-4 transition-all duration-200 ease-in-out rounded-md">
           Download my resume
         </div>
-      </div>
+      </motion.div>
       {/* <NavBar/> */}
     </main>
   );
