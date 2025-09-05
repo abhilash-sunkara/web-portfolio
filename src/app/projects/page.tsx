@@ -36,7 +36,7 @@ export default function RoboticsProjects() {
                     className="text-slate-300 font-bold text-7xl"
                 />
                 <div onClick={() => {router.push("/")}} className="flex items-center justify-center w-16 h-16 bg-slate-900 border rounded-md hover:bg-slate-300 group">
-                    <MdArrowBackIos className="text-slate-300 w-10 h-10 translate-x-[8px] group-hover:text-slate-900 group-hover:w-12 group-hover:h-12 group-hover:translate-x-[12px] transition-all duration-200 ease-in-out" />
+                    <MdArrowBackIos className="text-slate-300 w-10 h-10 translate-x-[8px] group-hover:text-slate-900 group-hover:w-12 group-hover:h-12 group-hover:translate-x-[12px] transition-all duration-500 ease-in-out" />
                 </div>
             </div>
             <div className="flex flex-row justify-start items-center">
@@ -48,8 +48,9 @@ export default function RoboticsProjects() {
                     label="Filter"
                     onChange={handleChange}
                     defaultValue={"All Projects"}
-                    sx={{ fontWeight: 'bold' }}
-                    className="rounded-xl border border-gray-300 bg-slate-300 px-3 font-bold text-slate-700 shadow-md focus:border-blue-500"
+                    sx={{ fontWeight: 'bold', color: "#cbd5e1", "& .MuiSelect-icon": {
+                        color: "#cbd5e1", },}}
+                    className="rounded-xl border-2 border-gray-300 bg-slate-950 px-3 text-slate-300 shadow-md focus:border-blue-500"
                 >
                     <MenuItem value={"All Projects"}>All Projects</MenuItem>
                     <MenuItem value={"Robotics"}>Robotics</MenuItem>

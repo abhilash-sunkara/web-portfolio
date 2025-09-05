@@ -83,9 +83,9 @@ export default function Home() {
         <div className="hover:bg-slate-900 hover:text-slate-300 w-full border-2 border-slate-400 my-1 text-slate-400 text-2xl font-bold p-4 transition-all duration-200 ease-in-out rounded-md" onClick={() => {router.push("/projects")}}>
           See my projects
         </div>  
-        <div className="hover:bg-slate-900 hover:text-slate-300 w-full border-2 border-slate-400 my-1 text-slate-400 text-2xl font-bold p-4 transition-all duration-200 ease-in-out rounded-md">
+        <a href = "/abhilash_sunkara_resume.pdf" download= "Abhilash-Sunkara-Resume" className="hover:bg-slate-900 hover:text-slate-300 w-full border-2 border-slate-400 my-1 text-slate-400 text-2xl font-bold p-4 transition-all duration-200 ease-in-out rounded-md">
           Download my resume
-        </div>
+        </a>
       </motion.div>
       {/* <NavBar/> */}
     </main>
