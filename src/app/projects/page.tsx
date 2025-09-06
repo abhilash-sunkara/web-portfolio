@@ -28,18 +28,24 @@ export default function RoboticsProjects() {
         return p.tags.includes(filter)
     }
 
+    const [firstAnim, setFirstAnim] = useState(false)
     return (
         <main className="flex min-h-screen flex-col items-start justify-start p-10 co bg-slate-950">
             <div className="flex flex-row items-center justify-between w-full">
                 <AnimatedHeader
                     text="Projects"
                     className="text-slate-300 font-bold text-7xl"
+                    setNextAnim={setFirstAnim}
                 />
                 <div onClick={() => {router.push("/")}} className="flex items-center justify-center w-16 h-16 bg-slate-900 border rounded-md hover:bg-slate-300 group">
                     <MdArrowBackIos className="text-slate-300 w-10 h-10 translate-x-[8px] group-hover:text-slate-900 group-hover:w-12 group-hover:h-12 group-hover:translate-x-[12px] transition-all duration-500 ease-in-out" />
                 </div>
             </div>
-            <div className="flex flex-row justify-start items-center">
+            <motion.div 
+                className="flex flex-row justify-start items-center" variants={slideFromLeft}
+                initial = "hidden"
+                animate = {"active"}
+            >
                 <div className="text-slate-300 font-bold text-5xl mr-4">Filter: </div>
                 <Select
                     labelId="demo-simple-select-label"
@@ -61,7 +67,7 @@ export default function RoboticsProjects() {
                     <MenuItem value={"Rust"}>Rust</MenuItem>
                     <MenuItem value={"C++"}>C++</MenuItem>
                 </Select>
-            </div>
+            </motion.div>
             {ProjectArray.filter((p) => {return checkForFilter(p)}).map((item, index) => (
                 <RoboticsProjectsTab key = {index} name = {item.name} details={item.details} imagePath={item.imagePath} tags = {item.tags}></RoboticsProjectsTab>
             ))}
